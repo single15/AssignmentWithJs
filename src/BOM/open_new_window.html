@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Javascript BOM
+            </h1>
+        </div>
+        <script>
+           let url = 'https://www.google.com/';
+           var jsWindow = window.open(url,'Google Search', 'height=600,width=1200');
+
+           setTimeout(() => {
+            jsWindow.resizeTo(600, 300);
+           }, 5000);
+        </script>
+    </body>
+</html>

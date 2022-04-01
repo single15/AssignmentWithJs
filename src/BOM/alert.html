@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Javascript BOM
+            </h1>
+        </div>
+        <script>
+            var result = confirm('Are you sure you want to Learn?');
+            if(result) {
+                var rating = prompt('Rate you experties out of 5!');
+                alert(rating > 3 ? 'You are expert!! Let\'s learn weird parts of javascript.' : 'You are beginner!! Let\'s learn some basic.')
+            } else {
+                alert(`You clicked the cancel button.`);
+            }
+            
+            setTimeout(() => {
+                alert('You are doing good!');
+            }, 5000)           
+        </script>
+    </body>
+</html>

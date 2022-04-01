@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Javascript BOM
+            </h1>
+        </div>
+        <div>
+            <button onclick="showAlert();">Show</button>
+            <button onclick="cancelAlert();">Cancel</button>
+        </div>
+        <script>
+            var timeoutID;
+
+            function showAlert() {
+                timeoutID = setTimeout(alert, 3000, 'setTimeout Demo!');
+            }
+
+            function cancelAlert() {
+                clearTimeout(timeoutID);
+            }
+        </script>
+    </body>
+</html>

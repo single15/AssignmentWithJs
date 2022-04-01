@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Javascript BOM
+            </h1>
+        </div>
+        <script>
+            const urlParams = new URLSearchParams('?type=list&page=20');
+
+            console.log(urlParams.has('type')); // true
+            console.log(urlParams.has('foo'));  // false
+        </script>
+    </body>
+</html>

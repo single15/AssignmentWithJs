@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Window Object</title>
+    </head>
+    <body>
+        <div>
+            <h1>
+                Javascript BOM
+            </h1>
+        </div>
+        <script>
+            var counter = 1;
+            var showCounter = () => console.log('counter = '+ counter);
+
+            console.log('window.counter =', window.counter);
+            window.showCounter();
+
+            console.log('----------------------------------')
+            const width = window.innerWidth
+                || document.documentElement.clientWidth
+                || document.body.clientWidth;
+
+            const height = window.innerHeight
+                || document.documentElement.clientHeight
+                || document.body.clientHeight;   
+
+            console.log('width = ' + width);
+            console.log('height = ' + height);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>querySelector() Demo</title>
+</head>
+
+<body>
+    <header>
+        <nav class="primary-nav">
+            <ul>
+                <li class="menu-item current"><a href="#home">Home</a></li>
+                <li class="menu-item"><a href="#services">Services</a></li>
+                <li class="menu-item"><a href="#about">About</a></li>
+                <li class="menu-item"><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 id="heading">Welcome to the JS Dev Agency</h1>
+        <div class="container">
+            <section class="section-a">
+                <h2>UI/UX</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit. Autem placeat, atque accusamus voluptas
+                    laudantium facilis iure adipisci ab veritatis eos
+                    neque culpa id nostrum tempora tempore minima.
+                    Adipisci, obcaecati repellat.</p>
+                <button>Read More</button>
+            </section>
+            <section class="section-b">
+                <h2>PWA Development</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing
+                    elit. Magni fugiat similique illo nobis quibusdam
+                    commodi aspernatur, tempora doloribus quod,
+                    consectetur deserunt, facilis natus optio. Iure
+                    provident labore nihil in earum.
+                    <a href="#">Link to there</a>
+                </p>
+                <button>Read More</button>
+            </section>
+            <section class="section-c">
+                <h2>Mobile App Dev</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Animi eos culpa laudantium consequatur ea!
+                    Quibusdam, iure obcaecati. Adipisci deserunt, alias
+                    repellat eligendi odit labore! Fugit iste sit
+                    laborum debitis eos?</p>
+                <button>Read More</button>
+            </section>
+        </div>
+    </main>
+    <script>
+        let element = document.querySelector('*');
+        console.log('universal', element);
+
+        element = document.querySelector('h1');
+        console.log('h1 type', element);
+
+        element = document.querySelector('h2');
+        console.log('h2 type', element);
+
+        element = document.querySelector('.menu-item');
+        console.log('class element', element);
+
+        element = document.querySelectorAll('.menu-item');
+        console.log('class elements', element);
+
+        element = document.querySelector('#heading');
+        console.log('Id element', element);
+
+        element = document.querySelector('p a')
+        ;
+        console.log('descendant element', element);
+
+        element = document.querySelectorAll('ul > li');
+        console.log('child element', element);
+
+
+        element = document.querySelectorAll('h2 + p');
+        console.log('adjacent element', element);
+
+        element = document.querySelectorAll('li:nth-child(3)');
+        console.log('pseudo element', element);
+
+    </script>
+</body>
+
+</html>

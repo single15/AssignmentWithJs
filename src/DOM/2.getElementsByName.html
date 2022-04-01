@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript getElementById() Method</title>
+    </head>
+    <body>
+        <h1>
+            Javascript DOM Tutorial
+        </h1>
+        <div>
+            <label for="js">
+                <input type="radio" id="js" name="language" value="JavaScript"> 
+                JavaScript
+            </label>
+            <label for="ts">
+                <input type="radio" id="ts" name="language" value="TypeScript"> 
+                TypeScript
+            </label>     
+            
+            <p>
+                <button id="btnLang">Submit</button>
+            </p>
+            <p id="output"></p>
+        </div>
+        
+
+        <script>
+            let btn = document.getElementById('btnLang');
+            let output = document.getElementById('output');
+
+            btn.addEventListener('click', () => {
+                let languages = document.getElementsByName('language');
+                languages.forEach((language) => {
+                    if (language.checked) {
+                        output.innerText = `You selected: ${language.value}`;
+                    }
+                });
+            });
+
+        </script>
+    </body>
+</html>

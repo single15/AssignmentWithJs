@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript getElementsByTagName() Demo</title>
+    </head>
+
+    <body>
+        <h1>JavaScript getElementsByTagName() Demo</h1>
+        <h2>First heading</h2>
+
+        <p>This is the first paragraph.</p>
+        <h2>Second heading</h2>
+
+        <p>This is the second paragraph.</p>
+        <h2>Third heading</h2>
+
+        <p>This is the third paragraph.</p>
+
+        <p>This is the 4th paragraph.</p>
+        <p>This is the 5th paragraph.</p>
+        <p>This is the 6th paragraph.</p>
+        <p>This is the 7th paragraph.</p>
+
+        <button id="btnCount">Count H2</button>
+
+        <button id="btnCountP">Count P</button>
+
+        <script>
+            let btn = document.getElementById('btnCount');
+            btn.addEventListener('click', () => {
+                let headings = document.getElementsByTagName('h2');
+                alert(`The number of H2 tags: ${headings.length}`);
+            });
+
+            let btnP = document.getElementById('btnCountP');
+            btnP.addEventListener('click', () => {
+                let paragraphs = document.getElementsByTagName('p');
+                alert(`The number of p tags: ${paragraphs.length}`);
+            });
+        </script>
+    </body>
+</html>
